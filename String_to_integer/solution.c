@@ -1,3 +1,10 @@
+/* https://leetcode.com/problems/string-to-integer-atoi/
+*
+*  Faster than 100.00% of C online submissions.
+*
+*  Memory Usage less than 65.26% of C online submissions.
+*
+*/
 int myAtoi(char * s)
 {
     int integer = 0;
@@ -18,7 +25,6 @@ int myAtoi(char * s)
             
             if(*(s + 1) != '`' && i >= 1){*(s + 1) = '`';}
             else if(*(s + 1) != '`' && *(s) != '`')*(s) = '`';
-            
         }
         else if(integer == 0 && *(s + 1) != '`' && (*s != '`') && *(s + i) == ' '
                 ||
