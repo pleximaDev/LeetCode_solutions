@@ -28,3 +28,15 @@ class Solution2:
             nums[0]^=nums.pop()
             i-=1
         return nums[0]
+
+
+
+# Faster than 97.90%
+class Solution3:
+    def singleNumber(self, nums: List[int]) -> int:
+        ans = nums.pop()
+        idx = len(nums) >> 1
+        while idx:
+            ans ^= nums[idx-1] ^ nums[-idx]
+            idx-=1
+        return ans
